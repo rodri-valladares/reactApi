@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { UcampApp } from './UcampApp';
+import { ReactApi } from './ReactApi';
 
 import './index.css';
 
 
 ReactDOM.render(
-  <UcampApp />,
+  <ReactApi />,
   document.getElementById('root')
 );
