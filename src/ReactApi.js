@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
+import { Catalogo } from './components/Catalogo';
 
 export const ReactApi = () => {
 
-    const [categories, setCategories] = useState(['Celulares', 'Televisores']);
+    const [categories, setCategories] = useState(['Celulares']);
 
     /* const handleAdd = () => {
         setCategories(cats =>[...cats, 'NuevaCategoria']);
@@ -19,9 +20,12 @@ export const ReactApi = () => {
 
             <ol>
                 {
-                   categories.map( category =>{
-                       return <li key={category}>{category}</li>
-                   }) 
+                   categories.map( category =>(
+                        <Catalogo 
+                            key={category} 
+                            category={category} 
+                        />
+                   )) 
                 }
             </ol>
         </>    
