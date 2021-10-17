@@ -1,6 +1,13 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+import { ProductCard } from './ProductCard';
 
 export const Catalogo = ({category}) => {
+
+    const [productos, setProductos]= useState([]);
+
+    useEffect(()=>{
+        getProducto();
+    }, [])
 
     const getProducto = async() =>{
 
@@ -19,13 +26,25 @@ export const Catalogo = ({category}) => {
             }    
         })
         console.log(producto);
+        setProductos(producto);
     }
 
-    getProducto();
+    
 
     return (
         <div>
             <h3>{category}</h3>
+            
+            {
+                productos.map( producto => (
+                    <ProductCard 
+                        key={producto.id}
+                        {...producto}
+                    />
+
+                ))
+            }
+            
         </div>
     )
 }

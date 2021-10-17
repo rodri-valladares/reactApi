@@ -4,7 +4,7 @@ import { Catalogo } from './components/Catalogo';
 
 export const ReactApi = () => {
 
-    const [categories, setCategories] = useState(['Celulares']);
+    const [categories, setCategories] = useState(['Televisores']);
 
     /* const handleAdd = () => {
         setCategories(cats =>[...cats, 'NuevaCategoria']);
