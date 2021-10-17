@@ -11,23 +11,23 @@ export const ReactApi = () => {
     } */
 
     return (
-        <>
-            <h2>Ucamp Rodrigo</h2>
-            <AddCategory setCategories={setCategories} />
-            <hr/>
-
+        <>  
+            <div className="container">
+                
+                <AddCategory setCategories={setCategories} />
+                
+                <ol>
+                    {
+                    categories.map( category =>(
+                            <Catalogo 
+                                key={category} 
+                                category={category} 
+                            />
+                    )) 
+                    }
+                </ol>
+            </div>
             
-
-            <ol>
-                {
-                   categories.map( category =>(
-                        <Catalogo 
-                            key={category} 
-                            category={category} 
-                        />
-                   )) 
-                }
-            </ol>
         </>    
         
     )

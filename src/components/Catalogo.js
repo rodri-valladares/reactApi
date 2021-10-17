@@ -11,7 +11,7 @@ export const Catalogo = ({category}) => {
 
     const getProducto = async() =>{
 
-        const url ='https://api.mercadolibre.com/sites/MLA/search?q=Televisor&limit=2';
+        const url ='https://api.mercadolibre.com/sites/MLA/search?q=Televisor&limit=10';
         const resp = await fetch(url);
         const {results} = await resp.json();
 
@@ -32,19 +32,21 @@ export const Catalogo = ({category}) => {
     
 
     return (
-        <div>
+        <>
             <h3>{category}</h3>
+            <div className="card-grid">
             
-            {
-                productos.map( producto => (
-                    <ProductCard 
-                        key={producto.id}
-                        {...producto}
-                    />
+                {
+                    productos.map( producto => (
+                        <ProductCard 
+                            key={producto.id}
+                            {...producto}
+                        />
 
-                ))
-            }
+                    ))
+                }
             
-        </div>
+            </div>
+        </>
     )
 }
