@@ -1,25 +1,22 @@
-import React, {useState, useEffect} from 'react'
-import { getProducto } from '../helpers/getProduct';
+import React from 'react';
+import {useFetchProduct} from '../hooks/useFetchProduct';
+
 import { ProductCard } from './ProductCard';
 
 export const Catalogo = ({category}) => {
 
-    const [productos, setProductos]= useState([]);
-
-    useEffect(()=>{
-        getProducto( category)
-            .then( product => setProductos(product))
-    }, [])
-
+    const {data:product, loading} = useFetchProduct(category);
     
-
     return (
         <>
             <h3 id="titulo">{category}</h3>
+
+            {loading && <p>Loading</p>}
+            
             <div className="card-grid">
             
                 {
-                    productos.map( producto => (
+                    product.map( producto => (
                         <ProductCard 
                             key={producto.id}
                             {...producto}
