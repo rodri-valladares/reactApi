@@ -9,9 +9,9 @@ export const Catalogo = ({category}) => {
     
     return (
         <>
-            <h3 id="titulo">{category}</h3>
+            <h3 id="titulo" className="animate__animated animate__fadeIn">{category}</h3>
 
-            {loading && <p>Loading</p>}
+            {loading && <p className="animate__animated animate__flash">Loading</p>}
             
             <div className="card-grid">
             

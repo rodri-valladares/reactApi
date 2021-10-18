@@ -12,12 +12,12 @@ export const useFetchProduct = (category) => {
 
         getProducto(category)
             .then( product =>{
-                setTimeout( ()=> {
-                    setState({
-                        data: product,
-                        loading:false
-                    });
-                }, 3000)
+                
+                setState({
+                    data: product,
+                    loading:false
+                });
+                
             })
 
     }, [category])
