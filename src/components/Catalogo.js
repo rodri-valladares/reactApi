@@ -11,7 +11,7 @@ export const Catalogo = ({category}) => {
 
     const getProducto = async() =>{
 
-        const url ='https://api.mercadolibre.com/sites/MLA/search?q=Televisor&limit=10';
+        const url =`https://api.mercadolibre.com/sites/MLA/search?q=${ encodeURI(category) }&limit=10`;
         const resp = await fetch(url);
         const {results} = await resp.json();
 
