@@ -1,9 +1,12 @@
 *{
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body{
   background-color: #f5f3f3;
+  
   
   
 }
@@ -11,7 +14,7 @@ body{
 input{
   color: gray;
   font-size: 1.2rem;
-  width: 80%;
+  width: 70%;
   margin:20px 0 20px 0;
 }
 .card-grid{
@@ -40,22 +43,40 @@ input{
 }
 
 .card img {
-  
   max-height: 170px;
 }
 
 .container{
-  
   position: relative;
   width: 70%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; 
+  text-align: center;
+}
+.container h2{
+  text-align: left;
+  padding: 50px 0px 0px 0px;
 }
 
+.container form{
+  text-align: left;
+  padding: 5px 0px 0px 0px;
+}
 header {
-  margin: 20px 0 20px 0;
-  padding: 0% 2rem;
+  
+  background-image:url("images/portada.jpg");
+  height: 250px;
+  background-size: cover;
+  color: white;
+  margin: 0;
+  
+}
+
+
+
+#titulo{
+  margin: 20px 0px;
   text-align: left;
 }

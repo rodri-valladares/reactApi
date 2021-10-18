@@ -6,16 +6,18 @@ export const ReactApi = () => {
 
     const [categories, setCategories] = useState(['Televisores']);
 
-    /* const handleAdd = () => {
-        setCategories(cats =>[...cats, 'NuevaCategoria']);
-    } */
-
     return (
         <>  
-            <div className="container">
+            <header>
                 
-                <AddCategory setCategories={setCategories} />
+
+                <div className="container">
+                    <h2 >Ucamp Rodrigo</h2>
+                    <AddCategory setCategories={setCategories} />
+                </div>
                 
+            </header>
+            <div className="container">            
                 <ol>
                     {
                     categories.map( category =>(
@@ -26,9 +28,7 @@ export const ReactApi = () => {
                     )) 
                     }
                 </ol>
-            </div>
-            
+            </div>   
         </>    
-        
     )
 }

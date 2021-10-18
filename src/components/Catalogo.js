@@ -29,11 +29,9 @@ export const Catalogo = ({category}) => {
         setProductos(producto);
     }
 
-    
-
     return (
         <>
-            <h3>{category}</h3>
+            <h3 id="titulo">{category}</h3>
             <div className="card-grid">
             
                 {
@@ -45,7 +43,6 @@ export const Catalogo = ({category}) => {
 
                     ))
                 }
-            
             </div>
         </>
     )
