@@ -21,7 +21,6 @@ export const Catalogo = ({category}) => {
                             key={producto.id}
                             {...producto}
                         />
-
                     ))
                 }
             </div>

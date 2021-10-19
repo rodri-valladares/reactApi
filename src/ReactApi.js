@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { AddCategory } from './components/AddCategory';
 import { Catalogo } from './components/Catalogo';
 
+
+
 export const ReactApi = () => {
 
     const [categories, setCategories] = useState(['Televisores']);
