@@ -1,11 +1,12 @@
 # Mongo/MongoDb compass
 
 database Name: react-api
+
 collection Name: productos
 
 ## Power Shell/ Command Prompt
 
-> mongod
+\ > mongod
 
 \API> npm run dev
 
